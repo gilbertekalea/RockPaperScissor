@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <title>RockPaperScissor</title>
+        <meta charset="uff-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../program/index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+        <link rel="manifest" href="../favicons/site.webmanifest">
+    </head>
+    <body>
+        <nav>
+        <a href="../program/index.html">
+            RockPaperScissor
+         </a>  
+        </nav>
+        <div class="container">
+            <!-- <h1 id = "player"><span class="name"></span></h1> -->
+            <h1> Welcome, <span id="player"></span>, Choose your weapon</h1>
+            <div class="wrap">
+                <div class="mini-wrap">
+                <img src="../photos/Rock.png" height="150px;" width="150px;" alt="Rock" onclick="player_selection('Rock');Rps_Condition()">
+                <img src="../photos/Paper.png" height="150px;" width="150px;" alt="paper" onclick="player_selection('Paper');Rps_Condition()">
+                <img src="../photos/Scissor.png" height="150px" width="150px;" alt="Scissor" onclick="player_selection('Scissor');Rps_Condition()">  
+                </div>      
+            </div>
+        </div>
+        <hr>
+        <div class="board">
+            <div class="score">
+                <h2>Score Sheet</h2>
+                <div id="user"></div>
+                <div id="comp"></div>
+                <div id="player_win"></div>
+            </div>
+            <div class="info">
+                <h2>Information board</h2>
+                <div id="current_result"></div>
+            </div>
+            </div>
+            <div class="moves">
+                <h2>Tracking moves</h2>
+                <div id="move"></div>
+            </div>
+        
+       <hr>
+    <footer>
+    Thought, designed, developed by <a href="https://github.com/gilbertekalea"; target="_blank">Gilbert Ekale Amoding</a>
+    </footer>
+        <script src = "index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,137 @@
+html, body {
+    background-color:black;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    width: auto;
+    height: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #292c34;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+img {
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+h1 {
+    color: turquoise;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    color: mediumspringgreen;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+a {
+    color: orangered;
+    text-decoration: none;
+}
+
+.container {
+    display: block;
+    margin: 5% 10% 0% 10%;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.index_container {
+    display: block;
+    margin-top: 3%;
+}
+
+.img_wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.mini-wrap>img:hover {
+    background-color: grey;
+    border-radius: 30%;
+}
+
+.board {
+    /* background-color:rgba(0, 100, 200, 0.5); */
+    display: flex;
+    flex-direction:  column;
+    text-align: center;
+}
+
+.score {
+    color: wheat;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.info {
+    flex: 75%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.moves {
+    text-align: center;
+}
+
+.link {
+    margin-left: 45%;
+    margin-top: 2%;
+}
+
+button {
+    background-color: black;
+    margin-left: 43%;
+    margin-top: 2%;
+    border-radius: 15%;
+    border-left: 5px dashed white;
+    border-right: 5px dashed white;
+    border-top: none;
+    border-bottom: none;
+}
+
+button>a {
+    color: gold;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+button>a:hover {
+    color: chartreuse;
+}
+
+nav>a {
+    color: white;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav>a:hover {
+    color: orangered;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2%;
+}
