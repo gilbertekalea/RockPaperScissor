@@ -11,22 +11,14 @@ html, body {
     background-color: azure;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-nav {
-    background-color: #292c34;
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-}
-
 img {
     cursor: pointer;
-    padding-left: 20px;
+    width: 100px;
+    height: 150px;
+}
+
+.ext-card {
+    padding-left: 10px;
 }
 
 h1 {
@@ -48,7 +40,10 @@ h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: orangered;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(243, 109, 0);
     text-decoration: none;
 }
 
@@ -58,7 +53,6 @@ li {
 
 .container {
     display: block;
-    margin: 5% 10% 0% 10%;
 }
 
 .wrap {
@@ -77,26 +71,23 @@ li {
     justify-content: center;
 }
 
-.mini-wrap>img:hover {
-    background-color: grey;
-    border-radius: 30%;
-}
-
 .board {
-    /* background-color:rgba(0, 100, 200, 0.5); */
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
 .score {
-    color: wheat;
+    margin-left: 500px;
+    margin-right: 500px;
+    color: blue;
     font-weight: bold;
     font-size: 20px;
 }
 
 .info {
-    flex: 75%;
+    margin-left: 500px;
+    margin-right: 500px;
     font-weight: bold;
     font-size: 20px;
 }
@@ -113,7 +104,7 @@ li {
 button {
     background-color: black;
     margin-left: 43%;
-    margin-top:3%;
+    margin-top: 3%;
     border-radius: 15%;
     border-left: 5px dashed white;
     border-right: 5px dashed white;
@@ -132,18 +123,6 @@ button>a:hover {
     color: chartreuse;
 }
 
-nav>a {
-    color: white;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-nav>a:hover {
-    color: orangered;
-}
-
 footer {
     text-align: center;
     margin-top: 3%;
@@ -152,5 +131,5 @@ footer {
 footer>a {
     font-family: 'Satisfy', cursive;
     font-size: 20px;
-    font-weight:bold;
+    font-weight: bold;
 }

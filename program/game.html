@@ -1,55 +1,91 @@
 <!DOCTYPE html>
 <html lang ="en">
-    <head>
-        <title>RockPaperScissor</title>
-        <meta charset="uff-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../program/index.css">
-        <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-        <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
-        <link rel="manifest" href="../favicons/site.webmanifest">
-    </head>
+<head>
+    <title>RockPaperScissor</title>
+    <meta charset="uff-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- local css -->
+    <link rel="stylesheet" href="../program/index.css">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Satisfy&display=swap" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+    <link rel="manifest" href="../favicons/site.webmanifest">
+</head>
     <body>
-        <nav>
-        <a href="../program/index.html">
-            RockPaperScissor
-         </a>  
-        </nav>
-        <div class="container">
-            <!-- <h1 id = "player"><span class="name"></span></h1> -->
-            <h1> Welcome, <span id="player"></span>, Choose your weapon</h1>
-            <div class="wrap">
-                <div class="mini-wrap">
-                <img src="../photos/Rock.png" height="150px;" width="150px;" alt="Rock" onclick="player_selection('Rock');Rps_Condition()">
-                <img src="../photos/Paper.png" height="150px;" width="150px;" alt="paper" onclick="player_selection('Paper');Rps_Condition()">
-                <img src="../photos/Scissor.png" height="150px" width="150px;" alt="Scissor" onclick="player_selection('Scissor');Rps_Condition()">  
-                </div>      
+         <div clas="card">
+             <div class="card-header border-0 bg-azure">
+                 <p class="card-text text-center">
+                <a href="../program/index.html"> HOME
+                </a>
+                </p>
+            </div>
+            <div class="card-header border-0 bg-azure">
+                <h1>Welcome, <span id="player"></span>, choose your weapon</h1>
             </div>
         </div>
+<hr>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3">
+            <div class="card-deck ext-card col mb-4">
+                <div class="card ml-5 bg-azure border-0">
+                    <img src="../photos/Rock.png" class="card-img-top" alt="Rock" onclick="player_selection('Rock');Rps_Condition()">
+                    <div class="card-body">
+                        <h5 class="card-title">ROCK</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-deck ext-card col mb-4">
+                <div class="card bg-azure border-0">
+                    <img src="../photos/Paper.png" class="card-img-top" alt="paper"
+                        onclick="player_selection('Paper');Rps_Condition()">
+                    <div class="card-body">
+                        <h5 class="card-title">PAPER</h5>
+                    </div>
+                </div>
+            </div>
+            <div class=" card-deck ext-card col mb-4">
+                <div class="card bg-azure border-0">
+                    <img src="../photos/Scissor.png" class="card-img-top" alt="Scissor"
+                        onclick="player_selection('Scissor');Rps_Condition()">
+                    <div class="card-body">
+                        <h5 class="card-title">SCISSOR</h5>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
         <hr>
         <div class="board">
-            <div class="score">
-                <h2>Score Sheet</h2>
-                <div id="user"></div>
-                <div id="comp"></div>
+            <div class="score shadow p-3 mb-5 bg-light rounded">
+                <h2 class="text-warning badge badge-pill badge-dark text-uppercase">Score Sheet</h2>
+                <div class="text-info" id="user"></div>
+                <div class="text-info" id="comp"></div>
                 <div id="player_win"></div>
             </div>
-            <div class="info">
-                <h2>Information board</h2>
+            <div class="info shadow p-3 mb-5 bg-light rounded">
+                <h2 class="text-warning badge badge-pill badge-dark text-uppercase">Decision Board</h2>
                 <div id="current_result"></div>
+                <div class ="text-muted" id="user-choice"></div>
+                <div class="text-muted" id="comp-choice"></div>
+                <div class="text-success" id="final_result"></div>
             </div>
             </div>
             <div class="moves">
                 <h2>Tracking moves</h2>
                 <div id="move"></div>
             </div>
-        
        <hr>
     <footer>
-    Thought, designed, developed by <a href="https://github.com/gilbertekalea"; target="_blank">Gilbert Ekale Amoding</a>
+    Thought, designed, developed by: <a href="https://github.com/gilbertekalea"; target="_blank">Gilbert Ekale Amoding</a>
     </footer>
         <script src = "index.js"></script>
     </body>
