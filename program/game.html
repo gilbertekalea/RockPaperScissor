@@ -37,27 +37,27 @@
             <div class="row row-cols-1 row-cols-md-3">
             <div class="card-deck ext-card col mb-4">
                 <div class="card ml-5 bg-azure border-0">
-                    <img src="../photos/Rock.png" class="card-img-top" alt="Rock" onclick="player_selection('Rock');Rps_Condition()">
+                    <img src="../photos/Rock.png" class="card-img-top col" alt="Rock" onclick="player_selection('Rock');Rps_Condition()">
                     <div class="card-body">
-                        <h5 class="card-title">ROCK</h5>
+                        <h5 class="card-title text-muted">ROCK</h5>
                     </div>
                 </div>
             </div>
             <div class="card-deck ext-card col mb-4">
                 <div class="card bg-azure border-0">
-                    <img src="../photos/Paper.png" class="card-img-top" alt="paper"
+                    <img src="../photos/Paper.png" class="card-img-top col" alt="paper"
                         onclick="player_selection('Paper');Rps_Condition()">
                     <div class="card-body">
-                        <h5 class="card-title">PAPER</h5>
+                        <h5 class="card-title text-muted">PAPER</h5>
                     </div>
                 </div>
             </div>
             <div class=" card-deck ext-card col mb-4">
                 <div class="card bg-azure border-0">
-                    <img src="../photos/Scissor.png" class="card-img-top" alt="Scissor"
+                    <img src="../photos/Scissor.png" class="card-img-top col" alt="Scissor"
                         onclick="player_selection('Scissor');Rps_Condition()">
                     <div class="card-body">
-                        <h5 class="card-title">SCISSOR</h5>
+                        <h5 class="card-title text-muted">SCISSOR</h5>
                     </div>
                 </div>
             </div>
@@ -65,28 +65,37 @@
             </div>
         <hr>
         <div class="board">
-            <div class="score shadow p-3 mb-5 bg-light rounded">
-                <h2 class="text-warning badge badge-pill badge-dark text-uppercase">Score Sheet</h2>
-                <div class="text-info" id="user"></div>
-                <div class="text-info" id="comp"></div>
-                <div id="player_win"></div>
-            </div>
-            <div class="info shadow p-3 mb-5 bg-light rounded">
+            <div class="info shadow p-3 mb-5 bg-light rounded col-3">
                 <h2 class="text-warning badge badge-pill badge-dark text-uppercase">Decision Board</h2>
-                <div id="current_result"></div>
-                <div class ="text-muted" id="user-choice"></div>
-                <div class="text-muted" id="comp-choice"></div>
-                <div class="text-success" id="final_result"></div>
+                <div class ="text-muted text-uppercase" id="user-choice"></div>
+                <div class="text-muted text-uppercase" id="comp-choice"></div>
+                <div class="text-success text-uppercase" id="final_result"></div>
+            </div>
+            <div class="score shadow p-3 mb-5 bg-light rounded col-3">
+                <h2 class="text-warning badge badge-pill badge-dark text-uppercase">Score Sheet</h2>
+                <div class="text-info text-uppercase" id="user"></div>
+                <div class="text-info text-uppercase" id="comp"></div>
             </div>
             </div>
-            <div class="moves">
-                <h2>Tracking moves</h2>
-                <div id="move"></div>
+            <button class="btn btn-info mt-1 text-white" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                User history
+            </button>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <div id="move" class="text-muted text-center"></div>
             </div>
+        </div>
        <hr>
-    <footer>
+    <footer class="text-muted">
     Thought, designed, developed by: <a href="https://github.com/gilbertekalea"; target="_blank">Gilbert Ekale Amoding</a>
     </footer>
         <script src = "index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"></script>
     </body>
 </html>

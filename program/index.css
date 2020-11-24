@@ -7,100 +7,6 @@ html, body {
     height: auto;
 }
 
-.bg-azure {
-    background-color: azure;
-}
-
-img {
-    cursor: pointer;
-    width: 100px;
-    height: 150px;
-}
-
-.ext-card {
-    padding-left: 10px;
-}
-
-h1 {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 28px;
-    color: black;
-    text-align: center;
-}
-
-h2 {
-    color: black;
-    font-size: 18px;
-}
-
-h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    text-align: center;
-    font-size: 18px;
-}
-
-a {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(243, 109, 0);
-    text-decoration: none;
-}
-
-li {
-    list-style-type: none;
-}
-
-.container {
-    display: block;
-}
-
-.wrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.index_container {
-    display: block;
-    margin-top: 3%;
-}
-
-.img_wrap {
-    display: flex;
-    justify-content: center;
-}
-
-.board {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.score {
-    margin-left: 500px;
-    margin-right: 500px;
-    color: blue;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.info {
-    margin-left: 500px;
-    margin-right: 500px;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.moves {
-    text-align: center;
-}
-
-.link {
-    margin-left: 45%;
-    margin-top: 2%;
-}
-
 button {
     background-color: black;
     margin-left: 43%;
@@ -123,6 +29,37 @@ button>a:hover {
     color: chartreuse;
 }
 
+img {
+    cursor: pointer;
+    width: 100px;
+    height: 150px;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 28px;
+    color: black;
+    text-align: center;
+}
+
+h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+}
+
+a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(243, 109, 0);
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
 footer {
     text-align: center;
     margin-top: 3%;
@@ -132,4 +69,36 @@ footer>a {
     font-family: 'Satisfy', cursive;
     font-size: 20px;
     font-weight: bold;
+}
+
+.container {
+    display: block;
+}
+
+.board {
+    display: flex;
+    flex-direction: row nowrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.info {
+    width: 25%;
+    margin-right: 80px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.score {
+    width: 25%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.bg-azure {
+    background-color: azure;
+}
+
+.ext-card {
+    padding-left: 10px;
 }

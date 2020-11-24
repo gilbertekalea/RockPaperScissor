@@ -43,6 +43,7 @@ function compare() {
     choice = "SCISSOR"
   }
 }
+
 function comp_compare() {
   if (computer_num === 1) {
     comp_choice = "ROCK";
@@ -54,6 +55,7 @@ function comp_compare() {
   }
   return comp_choice
 }
+
 //game winning logic
 function Rps_Condition() {
   computer_selection();
@@ -147,24 +149,13 @@ function array_toString() {
   document.getElementById("move").textContent = `[ ${finalString} ]`;
   return finalString;
 }
-function gameover() {
-  let message;
-  if (comp_score === 3) {
-    message = "GAME OVER, COMPUTER WINS"
-    document.getElementById("player_win").textContent = message;
-  } else if (player_Score === 3) {
-    message =`GAME OVER, ${user_name} WINS`
-    document.getElementById("player_win").textContent = message;
-  }
-  return message;
-}
 
-//Initializing score sheet 
+//Initializing score sheet and Decision Board
 document.getElementById("user").textContent = `${user_name} : ${player_Score}`;
 document.getElementById("comp").textContent = `Computer : ${comp_score}`;
 document.getElementById("player").textContent = `${user_name}`;
 document.getElementById("player").style.color = "orangered";
-document.getElementById("user-choice").style.color = "red";
-document.getElementById("comp-choice").style.color = "greenyellow";
+document.getElementById("user-choice").textContent = `${user_name}: `;
+document.getElementById("comp-choice").textContent = `Computer : `;
 
 
