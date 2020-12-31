@@ -1,104 +1,132 @@
-html, body {
-    background-color: azure;
-    color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 12x;
-    width: auto;
-    height: auto;
+html,
+body {
+  background-color: azure;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 12px;
+  width: auto;
+  height:auto;
 }
-
 button {
-    background-color: black;
-    margin-left: 43%;
-    margin-top: 3%;
-    border-radius: 15%;
-    border-left: 5px dashed white;
-    border-right: 5px dashed white;
-    border-top: none;
-    border-bottom: none;
+  background-color: black;
+  margin-left: 43%;
+  margin-top: 3%;
+  border-radius: 15%;
+  border-left: 5px dashed white;
+  border-right: 5px dashed white;
+  border-top: none;
+  border-bottom: none;
 }
 
-button>a {
-    color: gold;
-    font-weight: bold;
-    font-size: 30px;
-    text-transform: uppercase;
+button > a {
+  color: gold;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
 }
 
-button>a:hover {
-    color: chartreuse;
+button > a:hover {
+  color: chartreuse;
 }
 
 img {
-    cursor: pointer;
-    width: 100px;
-    height: 150px;
+  cursor: pointer;
+  width: 100px;
+  height: 150px;
+}
+img:hover {
+  background-color: antiquewhite;
 }
 
 h1 {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 28px;
-    color: black;
-    text-align: center;
+  font-family: "Permanent Marker", cursive;
+  font-size: 28px;
+  color: black;
+  text-align: center;
 }
 
-h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    text-align: center;
-    font-size: 18px;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
 }
 
 a {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(243, 109, 0);
-    text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(243, 109, 0);
+  text-decoration: none;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 footer {
-    text-align: center;
-    margin-top: 3%;
+  text-align: center;
+  margin-top: 3%;
 }
 
-footer>a {
-    font-family: 'Satisfy', cursive;
-    font-size: 20px;
+footer > a {
+  font-family: "Satisfy", cursive;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 15px;
+    text-transform: lowercase;
+  }
+  h2,h3 {
+    font-size:12px;
+    text-transform:lowercase;
+  }
+  img {
+    width: 50px;
+    height: 50px;
+  }
+  button {
+    font-size: x-small;
+  
+  }
+  p{
+    font-size:10px;
+
+  }
+  footer {
+    font-size: x-small;
+  }
+
+  footer > a {
+    text-decoration: none;
+    font-size:x-small;
+  }
+  a {
+    font-size: x-small;
+    text-decoration: underline;
+  }
+  .card-header {
+    font-size: 10px;
+    background-color: rgba(19, 183, 219, 0.774);
+  }
+  #user,
+  #comp,
+  #user-choice,
+  #comp-choice,
+  #final_result {
+    font-size: 10px;
     font-weight: bold;
+    text-align: left;
+  }
+  .container {
+    margin:auto;
+  }
 }
 
-.container {
-    display: block;
-}
-
-.board {
-    display: flex;
-    flex-direction: row nowrap;
-    text-align: center;
-    justify-content: center;
-}
-
-.info {
-    width: 25%;
-    margin-right: 80px;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.score {
-    width: 25%;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.bg-azure {
-    background-color: azure;
-}
-
-.ext-card {
-    padding-left: 10px;
-}

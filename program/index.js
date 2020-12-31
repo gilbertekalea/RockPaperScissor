@@ -27,7 +27,7 @@ function player_selection(user_input) {
   return user_assigned_num;
 }
 
-//randomly generate a number 
+//randomly generate a number
 function computer_selection() {
   computer_num = Math.floor(Math.random() * 3) + 1;
   return computer_num;
@@ -36,24 +36,22 @@ function computer_selection() {
 function compare() {
   if (user_assigned_num === 1 && computer_num === 1) {
     choice = "ROCK";
-  }
-  else if (user_assigned_num === 2 && computer_num === 2) {
+  } else if (user_assigned_num === 2 && computer_num === 2) {
     choice = "PAPER";
   } else if (user_assigned_num == 3 && computer_num === 3) {
-    choice = "SCISSOR"
+    choice = "SCISSOR";
   }
 }
 
 function comp_compare() {
   if (computer_num === 1) {
     comp_choice = "ROCK";
-  }
-  else if (computer_num === 2) {
+  } else if (computer_num === 2) {
     comp_choice = "PAPER";
   } else if (computer_num === 3) {
-    comp_choice = "SCISSOR"
+    comp_choice = "SCISSOR";
   }
-  return comp_choice
+  return comp_choice.toLowerCase();
 }
 
 //game winning logic
@@ -67,61 +65,76 @@ function Rps_Condition() {
   if (user_assigned_num === computer_num) {
     winner = "it's a Tie";
     document.getElementById("comp-choice").textContent = `Computer : ${choice}`;
-    document.getElementById("user-choice").textContent = `${user_name} : ${choice}`;
-    document.getElementById("final_result").textContent = `Winner : ${winner}`; 
-  }
-  else if (user_assigned_num === 1 && computer_num === 2) {
+    document.getElementById(
+      "user-choice"
+    ).textContent = `${user_name} : ${choice}`;
+    document.getElementById("final_result").textContent = `Winner : ${winner}`;
+  } else if (user_assigned_num === 1 && computer_num === 2) {
     winner = "Computer Wins";
-    document.getElementById("comp-choice").textContent = `Computer : ${comp_choice}`;
+    document.getElementById(
+      "comp-choice"
+    ).textContent = `Computer : ${comp_choice}`;
     document.getElementById("user-choice").textContent = `${user_name} : ROCK`;
     document.getElementById("final_result").textContent = `Winner : ${winner}`;
     comp_score += 1;
     document.getElementById("comp").textContent = `Computer : ${comp_score}`;
-  }
-    
-  else if (user_assigned_num === 1 && computer_num === 3) {
+  } else if (user_assigned_num === 1 && computer_num === 3) {
     winner = `${user_name} Wins`;
-    document.getElementById("comp-choice").textContent = `Computer : ${comp_choice}`;
+    document.getElementById(
+      "comp-choice"
+    ).textContent = `Computer : ${comp_choice}`;
     document.getElementById("user-choice").textContent = `${user_name} : ROCK`;
     document.getElementById("final_result").textContent = `Winner : ${winner}`;
-    player_Score+=1;
-    document.getElementById("user").textContent = `${user_name} : ${player_Score}`;
-  }
-  else if (user_assigned_num === 2 && computer_num === 1) {
-    winner = `${user_name} Wins`;;
-    document.getElementById("comp-choice").textContent = `Computer : ${comp_choice}`;
+    player_Score += 1;
+    document.getElementById(
+      "user"
+    ).textContent = `${user_name} : ${player_Score}`;
+  } else if (user_assigned_num === 2 && computer_num === 1) {
+    winner = `${user_name} Wins`;
+    document.getElementById(
+      "comp-choice"
+    ).textContent = `Computer : ${comp_choice}`;
     document.getElementById("user-choice").textContent = `${user_name} : PAPER`;
     document.getElementById("final_result").textContent = `Winner : ${winner}`;
-    player_Score+=1;
-    document.getElementById("user").textContent = `${user_name} : ${player_Score}`;
-  }
-  else if (user_assigned_num === 2 && computer_num === 3) {
-    winner = "Computer Wins"; 
-    document.getElementById("comp-choice").textContent = `Computer : ${comp_choice}`;
+    player_Score += 1;
+    document.getElementById(
+      "user"
+    ).textContent = `${user_name} : ${player_Score}`;
+  } else if (user_assigned_num === 2 && computer_num === 3) {
+    winner = "Computer Wins";
+    document.getElementById(
+      "comp-choice"
+    ).textContent = `Computer : ${comp_choice}`;
     document.getElementById("user-choice").textContent = `${user_name} : PAPER`;
     document.getElementById("final_result").textContent = `Winner: ${winner}`;
     comp_score += 1;
-    document.getElementById("comp").textContent = `Computer : ${comp_score}`
-  }
-  else if (user_assigned_num === 3 && computer_num === 1) {
+    document.getElementById("comp").textContent = `Computer : ${comp_score}`;
+  } else if (user_assigned_num === 3 && computer_num === 1) {
     winner = "Computer Wins";
-    document.getElementById("comp-choice").textContent = `Computer :${comp_choice}`;
-    document.getElementById("user-choice").textContent = `${user_name} : SCISSOR`;
+    document.getElementById(
+      "comp-choice"
+    ).textContent = `Computer :${comp_choice}`;
+    document.getElementById(
+      "user-choice"
+    ).textContent = `${user_name} : SCISSOR`;
     document.getElementById("final_result").textContent = `Winner : ${winner}`;
     comp_score += 1;
     document.getElementById("comp").textContent = `Computer : ${comp_score}`;
-  }
-  else if (user_assigned_num === 3 && computer_num === 2) {
+  } else if (user_assigned_num === 3 && computer_num === 2) {
     winner = `${user_name} Wins`;
-    document.getElementById("comp-choice").textContent = `Computer : ${comp_choice}`;
-    document.getElementById("user-choice").textContent = `${user_name} : SCISSOR`;
+    document.getElementById(
+      "comp-choice"
+    ).textContent = `Computer : ${comp_choice}`;
+    document.getElementById(
+      "user-choice"
+    ).textContent = `${user_name} : SCISSOR`;
     document.getElementById("final_result").textContent = `Winner : ${winner}`;
     player_Score += 1;
-    document.getElementById("user").textContent = `${user_name} : ${player_Score}`;
-  }
-  else alert("Invalid input");
-  console.log("user", user_assigned_num);
-  console.log("comp", computer_num);
+    document.getElementById(
+      "user"
+    ).textContent = `${user_name} : ${player_Score}`;
+  } else alert("Invalid input");
+  //gameover();
   return winner;
 }
 
@@ -130,25 +143,23 @@ function tracking_user_moves() {
   let user_moves;
   if (user_assigned_num === 1) {
     user_moves = "R";
-  }
-  else if (user_assigned_num === 2) {
+  } else if (user_assigned_num === 2) {
     user_moves = "P";
   } else if (user_assigned_num === 3) {
     user_moves = "S";
   }
-  console.log("moves", user_moves);
   track_user_moves.push(user_moves);
-  console.log("Track", track_user_moves);
   return track_user_moves;
 }
 //convert user moves into string then display it.
 function array_toString() {
   let array = track_user_moves;
   let finalString = array.toString();
-  console.log("string", finalString);
   document.getElementById("move").textContent = `[ ${finalString} ]`;
   return finalString;
 }
+
+
 
 //Initializing score sheet and Decision Board
 document.getElementById("user").textContent = `${user_name} : ${player_Score}`;
@@ -157,5 +168,3 @@ document.getElementById("player").textContent = `${user_name}`;
 document.getElementById("player").style.color = "orangered";
 document.getElementById("user-choice").textContent = `${user_name}: `;
 document.getElementById("comp-choice").textContent = `Computer : `;
-
-
